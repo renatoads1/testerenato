@@ -1,8 +1,8 @@
 <?php
 
-/* 1 - Desenvolva uma classe que possua 4 atributos privados que dever˜ao conter os
-seguintes dados:- Quantidade de dezenas, que dever´a permitir apenas as seguintes op¸c˜oes: 6, 7, 8,
-9 ou 10. - Resultado - Total jogos - Jogos */
+/* 1 - Desenvolva uma classe que possua 4 atributos privados que deverão conter os
+seguintes dados - Quantidade de dezenas, que deverá permitir apenas as seguintes 
+opções: 6, 7, 8, 9 ou 10. - Resultado - Total jogos - Jogos */
 
 Class Jogo {
     private $quantidadeDezenas;
@@ -11,11 +11,14 @@ Class Jogo {
     private $Jogos;
 
 
-/*3 - Desenvolver método de construtor onde 2 parâmetros serão recebidos os atributos
+/*3 - Desenvolver método construtor onde 2 parâmetros serão recebidos os atributos
 e consequentemente suas definições de valor:- Quantidade de dezenas - Total de jogos. */
 
     public function __construct($quantidadeDezenas, $totalJogos) {
-        $this->setQuantidadeDezenas($quantidadeDezenas);
+        //valida se qauntidade de dezenas atende a critérios
+        if($quantidadeDezenas > 5 && $quantidadeDezenas < 11 ){
+            $this->setQuantidadeDezenas($quantidadeDezenas);
+        }        
         $this->setTotalJogos($totalJogos);
     }    
 
